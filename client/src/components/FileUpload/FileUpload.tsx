@@ -38,7 +38,10 @@ const FileUpload = () => {
       formData.append("file", file);
     }
     try {
-      const res = await axios.post("http://localhost:5500/notes", formData);
+      const res = await axios.post(
+        `${import.meta.env.VITE_API_URL}/notes`,
+        formData
+      );
       console.log(res);
       setGeneratedContent(res?.data?.content);
     } catch (error) {
