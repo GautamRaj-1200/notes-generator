@@ -9,11 +9,10 @@ import fs from "fs/promises"
 dotenv.config();
 
 const app = express();
-const PORT = 5500;
 
 // Set up CORS
 app.use(cors({
-    origin: '*',
+    origin: process.env.CORS_ORIGIN,
     methods: ['GET', 'POST'],
     allowedHeaders: ['Content-Type', 'Authorization']
 }));
@@ -90,6 +89,6 @@ app.post('/notes', upload.single('file'), async (req: Request, res: Response) =>
 });
 
 // Start the server
-app.listen(PORT, () => {
-    console.log(`Server is running on port ${PORT}`);
+app.listen(process.env.PORT, () => {
+    console.log(`Server is running on port ${process.env.PORT}`);
 });
