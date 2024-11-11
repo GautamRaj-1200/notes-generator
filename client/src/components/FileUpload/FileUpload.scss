@@ -1,6 +1,7 @@
 .file-upload{
     height:90vh;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     position: relative;
@@ -32,7 +33,7 @@
     .error{
         color:rgb(236, 49, 43);
     }
-    button{
+    .btn{
         background-color: var(--clr-blue);
         outline: none;
         border: none;
@@ -42,3 +43,31 @@
         margin: 1rem 0; 
     }
 }
+.wait{
+    text-align: center;
+}
+.md{
+    margin: 0 auto;
+    width:90%;
+    height: 60rem;
+}
+.md-editor{
+    height: 100%;
+}
+.file-info{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:0.5rem;
+}
+.loading-icon{
+   animation:spin 1.5s linear infinite;
+}
+@keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
