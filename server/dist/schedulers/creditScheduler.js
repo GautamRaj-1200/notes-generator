@@ -11,7 +11,7 @@ import cron from "node-cron";
 import dayjs from "dayjs";
 import { User } from "../models/user.model.js";
 export const startCreditScheduler = () => {
-    // 0 - hour, 0 - minute, 1 - 1st day of the month, * * - Any month and any day of the week
+    // 0 - minute, 0 - hour, 1 - 1st day of the month, * * - Any month and any day of the week
     cron.schedule("0 0 1 * *", () => __awaiter(void 0, void 0, void 0, function* () {
         console.log("Refreshing credits for all users");
         // Get All Users
