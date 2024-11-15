@@ -5,17 +5,16 @@
     justify-content: center;
     align-items: center;
     position: relative;
-    
-    input{
-        height: 30rem;
-        width: 40%;
-        position: absolute;
-        cursor: pointer;
-        opacity:0;
-    }
+}
+.file-upload input{
+    height: 30rem;
+    width: 40%;
+    position: absolute;
+    cursor: pointer;
+    opacity:0;
 }
 .drag-drop{
-    border:1px dashed var(--clr-tea-green);
+    border:1px dashed var(--clr-gray);
     border-radius: 1rem;
     height: 30rem;
     width: 40%;
@@ -24,24 +23,27 @@
     justify-content: center;
     align-items: center;
     cursor: pointer;
+}
+.drag-drop p:first-of-type {
+    font-size: 1.3rem;
+    font-weight: bold;
+}
 
-    p:first-of-type {
-        font-size: 1.3rem;
-        font-weight: bold;
-      }
-    
-    .error{
-        color:rgb(236, 49, 43);
-    }
-    .btn{
-        background-color: var(--clr-blue);
-        outline: none;
-        border: none;
-        padding: 0.5rem 1rem;
-        border-radius:2.5rem;
-        cursor: pointer;
-        margin: 1rem 0; 
-    }
+.error{
+    color:rgb(236, 49, 43);
+}
+.btn{
+    background-color: var(--clr-gray-dark);
+    color:var(--clr-white);
+    outline: none;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius:0.2rem;
+    cursor: pointer;
+    margin: 1rem 0; 
+    font-weight: 600;
+    letter-spacing: 1px;
+    transition: all 0.5s;
 }
 .wait{
     text-align: center;
@@ -71,3 +73,18 @@
       transform: rotate(360deg);
     }
   }
+
+@media screen and (max-width:900px) {
+    .file-upload input{
+        width:80%;
+    }
+    .drag-drop{
+        width: 80%;
+    }
+}
+@media screen and (max-width:400px) {
+    .drag-drop p:first-of-type {
+        font-size: 1.1rem;
+        font-weight: bold;
+    }
+}
