@@ -1,11 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
 :root{
-    --clr-black:#0D1B1E;
-    --clr-light:#E8DCB9;
-    --clr-tea-green:#C3DBC5;
-    --clr-blue:#7798AB;
-    --clr-pink:#F2CEE6;
+    --clr-dark:#0B0C14;
+    --clr-light:#C9D3EE;
+    --clr-black:#000000;
+    --clr-white:#ffffff;
+    --clr-blue:#5B63D3;
+    --clr-gray-dark:#181926;
+    --clr-gray:#646E87;
+    // --clr-footer-light-bg:#f3f4f7;
+    // --clr-footer-dark-bg:#05060f;
 }
 // CSS Reset
 *,*::before,*::after{
